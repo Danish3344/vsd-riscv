@@ -18,4 +18,10 @@ we should follow the following steps to compile any **.c** file:
    ```
    ./a.out
    ```
-   ![Image](
+### RISCV Based LAB
+Follow the given steps:
+1.Open the terminal and then run the given command:
+  ```
+   cat danish.c
+  ```
+2. 
