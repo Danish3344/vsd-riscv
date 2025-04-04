@@ -1,5 +1,5 @@
 # vsd-riscv
-in the entire task the danish.c the c code 
+In the entire task the danish.c the c code 
 <details>
 <summary><b>Task 1:</b> in this task c based code is compiled using gcc and riscv based on RISCV based lab </summary>
 
@@ -24,4 +24,26 @@ Follow the given steps:
   ```
    cat danish.c
   ```
-2. 
+2. to compile the code in riscv64 gcc compiler to get RISCV objdump in -o1 format run  this command:
+  ```
+  riscv64-unknown-elf-gcc -o1 -mabi=lp64 -march=rv64i -o danish.o danish.c
+  ```
+3. Open a new tab terminal and then run the given command:
+   ```
+   riscv64-unknown-elf-objdump -d danish.o
+   ```
+4. To get main section of data run given command, afterthe ```/main``` to locate main section of the code
+   ```
+   riscv64-unknown-elf-objdump -d danish.o | less
+   ```
+5. to get RISCV objdump in -ofast format run the given command in perivous tab:
+    ```
+    riscv64-unknown-elf-gcc -ofast -mabi=lp64 -march=rv64i -o danish.o danish.c
+    ```
+6. Open a new tab terminal then run the given command :
+    ```
+    riscv64-unknown-elf-objdump -d danish.o
+    ```
+7. To get main section of the data run the given command, After that ```/main``` to locate the main section of the code:
+   ```
+   riscv64-unknown-elf-objdump -d danish.o | less
